@@ -1,0 +1,2277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokhara Tourism Portal | Experience Nepal's Paradise</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="homee.css" />
+    <style>
+      #carouselExampleAutoplaying {
+        margin-bottom: 20px;
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: visible;
+        background-color: #f8f9fa;
+        border-radius: 1px;
+      }
+      .carousel-item img {
+        width: 50%;
+        height: 350px;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto;
+      }
+      .carousel-item {
+        position: relative;
+      }
+      .custom-caption {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+        transform: translateX(-35%);
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+      }
+      h1 {
+        font-family: "Times New Roman", Gadget, sans-serif;
+        font-size: 40px;
+        margin-bottom: 15px;
+      }
+      pre {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin-top: 15px;
+      }
+      .guide-box {
+        position: absolute;
+        background: white;
+        padding: 8px 10px;
+        bottom: -50px;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        width: 100%;
+        height: 100px;
+        max-width: 60%;
+        left: 37%;
+        transform: translateX(-30%);
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        cursor: pointer;
+        width: 60px;
+        margin: 0 5px;
+        padding: 5px;
+        transition:
+          background-color 0.3s,
+          transform 0.3s;
+        text-decoration: none !important;
+        border: none;
+        background: transparent;
+      }
+      .icon svg {
+        display: flex;
+        margin-bottom: 8px;
+      }
+      .icon p {
+        margin: 0;
+        font-size: 14px;
+        color: #023e8a;
+        font-weight: 500;
+        text-decoration: none;
+      }
+      .icon:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-5px);
+        text-decoration: none;
+      }
+
+      /* Main Content Sections */
+      section {
+        margin: 50px 0;
+      }
+
+      section h2 {
+        text-align: center;
+        margin: 30px 0 10px 0;
+        font-family: Times, serif;
+        color: #023e8a;
+        font-weight: bolder;
+        font-size: 2.5rem;
+      }
+
+      section p {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #555;
+        font-size: 18px;
+        max-width: 800px;
+        margin: 0 auto 30px;
+        line-height: 1.6;
+      }
+
+      /* Container for cards */
+      .card-container {
+        margin: 0px 20px 0px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+      }
+
+      /* Card styling */
+      .card {
+        height: 350px;
+        border: 2px solid #023e8a;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #fff;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Card image */
+      .card img {
+        width: 80%;
+        padding: 10px 5px;
+        height: 200px;
+        object-fit: cover;
+        left: 40%;
+        transform: translateX(10%);
+        border-radius: 20px;
+      }
+
+      /* Card body */
+      .card-body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 1px 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        text-align: center;
+        flex-grow: 1;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: black;
+        margin: 1px 0;
+      }
+
+      /* Discount */
+      .discount {
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+        margin: 0;
+      }
+
+      /* Price */
+      .price {
+        font-size: 0.8rem;
+        color: black;
+        margin: 1px 0 8px;
+      }
+
+      /* Button */
+      .card .btn {
+        display: block;
+        padding: 2px 20px;
+        border: 2px solid #9984c6ff;
+        background: white;
+        color: #236edeff;
+        font-size: 0.75rem;
+        font-family:
+          Serif Pro,
+          serif;
+        border-radius: 6px;
+        box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+        transition: 0.2s ease;
+      }
+
+      .card .btn:hover {
+        background: #9984c6ff;
+        color: white;
+      }
+
+      /* Modal Styles */
+      .modal-xl {
+        max-width: 90%;
+      }
+
+      .modal-content {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .modal-header {
+        background: linear-gradient(135deg, #023e8a, #0077b6);
+        color: white;
+        border-bottom: none;
+      }
+
+      .modal-header .btn-close {
+        filter: invert(1);
+      }
+
+      .modal-body {
+        padding: 20px;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      /* Info Container Styles */
+      .info-container {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .info-header {
+        background: linear-gradient(135deg, #023e8a, #0077b6);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        text-align: center;
+      }
+
+      .info-tabs {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .info-tab {
+        padding: 10px 20px;
+        background: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 30px;
+        cursor: pointer;
+        transition: all 0.3s;
+        font-weight: 500;
+      }
+
+      .info-tab:hover,
+      .info-tab.active {
+        background: #023e8a;
+        color: white;
+        border-color: #023e8a;
+      }
+
+      .info-card {
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+        transition: transform 0.3s;
+        height: 100%;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-img {
+        height: 200px;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .info-details {
+        padding: 20px;
+      }
+
+      .info-price {
+        color: #e74c3c;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin: 10px 0;
+      }
+
+      .info-features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .feature {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #555;
+        background: #f8f9fa;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+      }
+
+      .feature i {
+        color: #023e8a;
+      }
+
+      .btn-action {
+        background: #023e8a;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 15px;
+        transition: background 0.3s;
+        font-weight: 600;
+      }
+
+      .btn-action:hover {
+        background: #022e6d;
+      }
+
+      .loading-spinner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+        flex-direction: column;
+      }
+
+      /* Booking Form Styles */
+      .booking-form-container {
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+
+      .booking-form h4 {
+        color: #023e8a;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #023e8a;
+        padding-bottom: 10px;
+      }
+
+      .form-group {
+        margin-bottom: 15px;
+      }
+
+      .form-group label {
+        font-weight: 600;
+        color: #023e8a;
+        margin-bottom: 5px;
+      }
+
+      .form-group label .required {
+        color: #e74c3c;
+      }
+
+      .form-control,
+      .form-select {
+        border: 1px solid #023e8a;
+        border-radius: 5px;
+        padding: 10px;
+      }
+
+      .form-control:focus,
+      .form-select:focus {
+        border-color: #0077b6;
+        box-shadow: 0 0 0 0.2rem rgba(2, 62, 138, 0.25);
+      }
+
+      .booking-summary {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        padding: 15px;
+        margin-top: 20px;
+      }
+
+      .booking-summary h5 {
+        color: #023e8a;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 10px;
+      }
+
+      .summary-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+      }
+
+      .summary-total {
+        font-weight: bold;
+        font-size: 1.2rem;
+        color: #e74c3c;
+        border-top: 2px solid #ddd;
+        padding-top: 10px;
+      }
+
+      .booking-success {
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .booking-success i {
+        font-size: 4rem;
+        color: #2ecc71;
+        margin-bottom: 20px;
+      }
+
+      .booking-success h4 {
+        color: #023e8a;
+      }
+
+      .booking-success p {
+        color: #555;
+      }
+
+      /* Updated Footer Styles */
+      .site-footer {
+        background: var(--brand);
+        color: white;
+        padding: 50px 0 20px;
+        margin-top: 50px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 30px;
+      }
+
+      .footer-section h3 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .footer-section p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color 0.2s;
+        display: block;
+        padding: 5px 0;
+      }
+
+      .footer-links a:hover {
+        color: white;
+        padding-left: 5px;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      @media (max-width: 768px) {
+        .footer-content {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .guide-box {
+          max-width: 90%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Updated Navigation -->
+    <nav class="main-nav">
+      <div class="nav-inner">
+        <!-- Left: logo -->
+        <a href="homee.html" class="logo">
+          <img src="logo.jpeg" alt="logo" />
+        </a>
+
+        <!-- Center: navigation links -->
+        <ul class="nav-links">
+          <li><a href="homee.html">HOME</a></li>
+          <li><a href="aboutus.php">ABOUT</a></li>
+          <li><a href="tour.php">TOUR</a></li>
+          <li><a href="destination.php">DESTINATIONS</a></li>
+          <li><a href="blog.php">BLOG</a></li>
+          <li><a href="contact.php">CONTACT US</a></li>
+        </ul>
+
+        <!-- Right: actions -->
+        <div class="nav-actions" id="navRight">
+          <!-- Default: Sign up button -->
+          <a class="signup" href="signup.php">Sign Up</a>
+          <!-- Magnifying glass -->
+          <i
+            class="fa fa-search"
+            id="searchIcon"
+            style="cursor: pointer; font-size: 20px"
+          ></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay">
+      <input
+        type="text"
+        id="searchBox"
+        placeholder="Type keywords to search..."
+      />
+      <button id="closeBtn">&times;</button>
+    </div>
+
+    <!-- Main Content (rest of your HTML remains the same) -->
+    <div
+      id="carouselExampleAutoplaying"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <!-- Carousel content remains exactly the same -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="pokara.jpg" class="d-block w-100" alt="pokara" />
+          <div class="custom-caption">
+            <h1>See It Like a Local, Love It Like a Local</h1>
+            <pre>
+Looking for more than just landmarks? Join our local guides for authentic,
+        small-group tours that take you beyond the brochure.
+              From hidden gems to unforgettable stories,
+                  we'll show you the real [Pokhara]
+                      —just like a local would.</pre
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="nice.jpg" class="d-block w-100" alt="nice" />
+          <div class="custom-caption">
+            <h1>See It Like a Local, Love It Like a Local</h1>
+            <pre>
+Looking for more than just landmarks? Join our local guides for authentic,
+      small-group tours that take you beyond the brochure.
+      From hidden gems to unforgettable stories,
+      we'll show you the real [Pokhara]
+      —just like a local would.</pre
+            >
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="waterfall.jpg" class="d-block w-100" alt="waterfall" />
+          <div class="custom-caption">
+            <h1>See It Like a Local, Love It Like a Local</h1>
+            <pre>
+Looking for more than just landmarks? Join our local guides for authentic,
+        small-group tours that take you beyond the brochure.
+              From hidden gems to unforgettable stories,
+                  we'll show you the real [Pokhara]
+                      —just like a local would.</pre
+            >
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleAutoplaying"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- Guide Box with all icons -->
+      <div class="guide-box">
+        <!-- Villa Icon -->
+        <button class="icon" data-type="villa" onclick="openModal('villa')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g clip-path="url(#clip0_79_86)">
+              <mask
+                id="mask0_79_86"
+                style="mask-type: luminance"
+                maskUnits="userSpaceOnUse"
+                x="0"
+                y="0"
+                width="50"
+                height="50"
+              >
+                <path d="M0 0H50V50H0V0Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_79_86)">
+                <path
+                  d="M36.1562 32.8157H29.4688C28.7188 32.8157 28.125 32.2219 28.125 31.4719V24.7844C28.125 24.05 28.7188 23.4407 29.4688 23.4407H36.1562C36.8906 23.4407 37.5 24.0344 37.5 24.7844V31.4719C37.5 32.2219 36.9062 32.8157 36.1562 32.8157Z"
+                  fill="#023E8A"
+                />
+                <path
+                  d="M28.5626 1.4423L28.5689 1.45011L48.4985 21.0829L48.5032 21.0876C48.9778 21.5495 49.3549 22.1019 49.6122 22.7121C49.8696 23.3223 50.0019 23.9779 50.0015 24.6402C50.0011 25.3024 49.8678 25.9578 49.6097 26.5677C49.3515 27.1775 48.9737 27.7294 48.4985 28.1907C47.6431 29.0353 46.5121 29.5434 45.3126 29.622V39.2329C46.648 39.5525 47.8369 40.3126 48.6873 41.3907C49.5378 42.4688 50.0002 43.802 50.0001 45.1751V48.4407H0.000107263V45.1751C-0.00204102 43.8013 0.459641 42.4669 1.31038 41.3882C2.16112 40.3095 3.3511 39.5495 4.68761 39.2314V29.6845C3.48838 29.6017 2.35807 29.0936 1.50011 28.2517C1.02541 27.7886 0.648117 27.2353 0.390414 26.6243C0.13271 26.0133 -0.000196631 25.3569 -0.000487802 24.6937C-0.000778972 24.0306 0.131551 23.3741 0.388718 22.7628C0.645885 22.1516 1.0227 21.598 1.49698 21.1345L1.50167 21.1314L6.25011 16.4564V5.50324C6.25011 3.2173 8.13761 1.56261 10.2235 1.56261H14.7923C16.5142 1.56261 18.061 2.68761 18.5735 4.32667L21.4876 1.45324C23.4564 -0.503012 26.6126 -0.465512 28.5595 1.44074M15.6251 11.6126V5.50324C15.6218 5.28496 15.5325 5.07682 15.3765 4.92408C15.2206 4.77134 15.0106 4.68635 14.7923 4.68761H10.2235C10.114 4.68492 10.005 4.70398 9.90292 4.74371C9.80081 4.78343 9.70759 4.84302 9.62868 4.91903C9.54976 4.99504 9.48672 5.08595 9.44319 5.1865C9.39966 5.28705 9.37652 5.39524 9.37511 5.5048V17.7642L15.6251 11.6126ZM7.81261 24.6032V42.1907H10.9376C10.9376 41.3314 11.6407 40.6282 12.5001 40.6282V25.6126C12.5001 24.4407 13.4532 23.4876 14.6251 23.4876H22.8907C24.0626 23.4876 25.0157 24.4407 25.0157 25.6126V40.6314C25.8392 40.672 26.5001 41.3579 26.5001 42.1907H42.1876V24.5407L25.0314 7.64543L7.81261 24.6032ZM23.4376 32.0345C23.4376 31.8273 23.3553 31.6286 23.2088 31.4821C23.0623 31.3355 22.8636 31.2532 22.6564 31.2532C22.4492 31.2532 22.2504 31.3355 22.1039 31.4821C21.9574 31.6286 21.8751 31.8273 21.8751 32.0345C21.8751 32.2417 21.9574 32.4404 22.1039 32.5869C22.2504 32.7334 22.4492 32.8157 22.6564 32.8157C22.8636 32.8157 23.0623 32.7334 23.2088 32.5869C23.3553 32.4404 23.4376 32.2417 23.4376 32.0345Z"
+                  fill="#023E8A"
+                />
+              </g>
+            </g>
+            <defs>
+              <clipPath id="clip0_79_86">
+                <rect width="50" height="50" fill="white" />
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Villa</p>
+        </button>
+
+        <!-- Hotel Icon -->
+        <button class="icon" data-type="hotel" onclick="openModal('hotel')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 46"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M37.5 40.5H42.5V20.5H27.5V40.5H32.5V25.5H37.5V40.5ZM2.5 40.5V3C2.5 2.33696 2.76339 1.70107 3.23223 1.73223C3.70107 0.763392 4.33696 0.5 5 0.5H40C40.663 0.5 41.2989 0.763392 41.7678 1.23223C42.2366 1.70107 42.5 2.33696 42.5 3V15.5H47.5V40.5H50V45.5H0V40.5H2.5ZM12.5 20.5V25.5H17.5V20.5H12.5ZM12.5 30.5V35.5H17.5V30.5H12.5ZM12.5 10.5V15.5H17.5V10.5H12.5Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>Hotel</p>
+        </button>
+
+        <!-- Apartment Icon -->
+        <button
+          class="icon"
+          data-type="apartment"
+          onclick="openModal('apartment')"
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 50V11.1111H11.1111V0H38.8889V22.2222H50V50H27.7778V38.8889H22.2222V50H0ZM5.55556 44.4444H11.1111V38.8889H5.55556V44.4444ZM5.55556 33.3333H11.1111V27.7778H5.55556V33.3333ZM5.55556 22.2222H11.1111V16.6667H5.55556V22.2222ZM16.6667 33.3333H22.2222V27.7778H16.6667V33.3333ZM16.6667 22.2222H22.2222V16.6667H16.6667V22.2222ZM16.6667 11.1111H22.2222V5.55556H16.6667V11.1111ZM27.7778 33.3333H33.3333V27.7778H27.7778V33.3333ZM27.7778 22.2222H33.3333V16.6667H27.7778V22.2222ZM27.7778 11.1111H33.3333V5.55556H27.7778V11.1111ZM38.8889 44.4444H44.4444V38.8889H38.8889V44.4444ZM38.8889 33.3333H44.4444V27.7778H38.8889V33.3333Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>Apartment</p>
+        </button>
+
+        <!-- Guide Icon -->
+        <button class="icon" data-type="guide" onclick="openModal('guide')">
+          <svg
+            width="50"
+            height="30"
+            viewBox="0 0 103 40"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 19.7183C0 13.1455 4.87796 9.01408 10.3188 9.01408C12.9454 9.01408 15.572 10.1408 17.0729 12.2066V9.38967H21.388V29.4836C21.388 35.493 17.6357 40 11.0692 40C6.00364 40 2.43898 37.5587 0.938069 34.1784L5.06557 32.3005C6.00364 34.554 8.0674 36.0563 11.2568 36.0563C15.0091 36.0563 17.2605 33.2394 17.2605 29.8592V27.0423C15.7596 29.108 13.133 30.4225 10.3188 30.4225C5.06557 30.2347 0 26.1033 0 19.7183ZM17.4481 19.5305C17.4481 15.9624 14.6339 12.9577 10.8816 12.9577C7.31694 12.9577 4.31512 15.7746 4.31512 19.5305C4.31512 23.2864 7.12933 26.2911 10.8816 26.2911C14.6339 26.2911 17.4481 23.2864 17.4481 19.5305ZM25.1403 21.4085V9.38967H29.643V21.0329C29.643 24.4131 31.3315 26.4789 34.521 26.4789C37.5228 26.4789 39.7741 24.2254 39.7741 20.6573V9.38967H44.0893V29.8592H39.7741V27.23C38.4608 29.108 36.2095 30.2347 33.5829 30.2347C28.1421 30.2347 25.1403 27.0423 25.1403 21.4085ZM51.031 0.375587C52.7195 0.375587 54.0328 1.69014 54.0328 3.38028C54.0328 5.07042 52.7195 6.19718 51.031 6.19718C49.3424 6.19718 48.0291 4.88263 48.0291 3.19249C48.0291 1.50235 49.3424 0.375587 51.031 0.375587ZM48.7796 9.38967H53.2823V29.8592H48.7796V9.38967ZM56.6594 19.7183C56.6594 13.1455 61.5373 9.01408 66.9781 9.01408C69.6047 9.01408 72.2313 10.1408 73.7322 12.0188V0H78.0474V30.0469H73.7322V27.0423C72.2313 29.108 69.6047 30.2347 66.7905 30.2347C61.725 30.2347 56.6594 26.1033 56.6594 19.7183ZM74.1075 19.5305C74.1075 15.9624 71.2933 12.9577 67.541 12.9577C63.9763 12.9577 60.9745 15.9624 60.9745 19.5305C60.9745 23.0986 63.7887 26.2911 67.541 26.2911C71.2933 26.2911 74.1075 23.2864 74.1075 19.5305ZM81.7996 19.7183C81.7996 13.7089 86.49 9.01408 92.4936 9.01408C98.4973 9.01408 103 13.3333 103 19.5305V21.2207H85.9271C86.49 24.4131 88.929 26.4789 92.4936 26.4789C95.3078 26.4789 97.3716 24.9765 98.4973 22.723L102.062 24.7887C100.186 28.169 96.9964 30.4225 92.4936 30.4225C86.1148 30.2347 81.7996 25.7277 81.7996 19.7183ZM86.3024 17.4648H98.6849C97.9344 14.4601 95.6831 12.77 92.6812 12.77C89.4918 12.77 87.0528 14.6479 86.3024 17.4648Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>Guide</p>
+        </button>
+
+        <!-- Flight Icon -->
+        <button class="icon" data-type="flight" onclick="openModal('flight')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M48.7033 1.27529C50.4322 3.00498 50.4322 5.79009 48.7033 7.49047L37.304 18.8948L43.5165 45.837L39.3846 50L28.0147 28.2175L16.5861 39.6511L17.641 46.8924L14.5055 50L9.34799 40.6772L0 35.4881L3.10623 32.3219L10.4322 33.4066L21.7729 22.061L0 10.5981L4.16117 6.46438L31.0916 12.6796L42.4908 1.27529C44.1319 -0.425095 47.0623 -0.425095 48.7033 1.27529Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>Flight</p>
+        </button>
+
+        <!-- To Do Icon -->
+        <button class="icon" data-type="todo" onclick="openModal('todo')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M6.67499 42.4643C6.23241 42.4643 5.80796 42.2874 5.49501 41.9726C5.18206 41.6579 5.00624 41.2309 5.00624 40.7857V7.21429C5.00624 6.7691 5.18206 6.34215 5.49501 6.02736C5.80796 5.71256 6.23241 5.53571 6.67499 5.53571H37.5468C38.2107 5.53571 38.8474 5.27044 39.3168 4.79825C39.7862 4.32606 40.0499 3.68563 40.0499 3.01786C40.0499 2.35008 39.7862 1.70965 39.3168 1.23746C38.8474 0.765274 38.2107 0.5 37.5468 0.5H6.67499C4.90467 0.5 3.20686 1.2074 1.95506 2.46657C0.703256 3.72574 0 5.43355 0 7.21429V40.7857C0 42.5665 0.703256 44.2743 1.95506 45.5334C3.20686 46.7926 4.90467 47.5 6.67499 47.5H40.0499C41.8203 47.5 43.5181 46.7926 44.7699 45.5334C46.0217 44.2743 46.7249 42.5665 46.7249 40.7857V29.875C46.7249 29.2072 46.4612 28.5668 45.9918 28.0946C45.5224 27.6224 44.8857 27.3571 44.2218 27.3571C43.5579 27.3571 42.9213 27.6224 42.4518 28.0946C41.9824 28.5668 41.7187 29.2072 41.7187 29.875V40.7857C41.7187 41.2309 41.5429 41.6579 41.2299 41.9726C40.917 42.2874 40.4925 42.4643 40.0499 42.4643H6.67499ZM49.3282 12.8543C49.7703 12.377 50.0111 11.7457 49.9996 11.0934C49.9882 10.4411 49.7255 9.81873 49.2668 9.35741C48.8082 8.8961 48.1895 8.63185 47.541 8.62034C46.8926 8.60883 46.2649 8.85096 45.7904 9.29571L27.2406 27.9514L20.9895 21.4519C20.7614 21.2122 20.4885 21.0202 20.1864 20.8869C19.8843 20.7537 19.559 20.6818 19.2292 20.6754C18.8994 20.669 18.5716 20.7283 18.2647 20.8498C17.9577 20.9712 17.6776 21.1526 17.4406 21.3833C17.2035 21.614 17.0141 21.8896 16.8833 22.1942C16.7525 22.4988 16.6828 22.8264 16.6782 23.1581C16.6737 23.4899 16.7344 23.8193 16.8568 24.1274C16.9793 24.4355 17.161 24.7162 17.3917 24.9534L25.4117 33.2926C25.6425 33.5333 25.9186 33.7254 26.2239 33.8576C26.5293 33.9898 26.8578 34.0596 27.1903 34.0627C27.5227 34.0658 27.8524 34.0023 28.1602 33.8758C28.468 33.7494 28.7476 33.5625 28.9828 33.3261L49.3282 12.8543Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>To Do</p>
+        </button>
+
+        <!-- Offers Icon -->
+        <button class="icon" data-type="offers" onclick="openModal('offers')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M46.9007 25L49.664 20.2242C49.9962 19.6496 50.0865 18.9667 49.9152 18.3255C49.7438 17.6844 49.3249 17.1375 48.7504 16.8051L43.9697 14.0418V8.53518C43.9697 7.87135 43.706 7.2347 43.2365 6.76529C42.7671 6.29589 42.1305 6.03218 41.4666 6.03218H35.9625L33.2017 1.25394C32.8699 0.679074 32.3234 0.259517 31.6823 0.0875364C31.3648 0.00243809 31.0335 -0.0192568 30.7076 0.0236905C30.3816 0.0666378 30.0673 0.173386 29.7826 0.337837L25.0018 3.10116L20.221 0.335334C19.6461 0.00342956 18.9629 -0.086515 18.3217 0.085286C17.6805 0.257087 17.1338 0.676562 16.8019 1.25144L14.0386 6.03218H8.53443C7.87059 6.03218 7.23393 6.29589 6.76453 6.76529C6.29512 7.2347 6.03141 7.87135 6.03141 8.53518V14.0393L1.25064 16.8026C0.96587 16.9672 0.716323 17.1863 0.516267 17.4473C0.31621 17.7084 0.169567 18.0063 0.0847202 18.3241C-0.00012699 18.6419 -0.0215143 18.9732 0.0217805 19.2993C0.0650753 19.6253 0.172203 19.9396 0.337041 20.2242L3.10037 25L0.337041 29.7757C0.00661418 30.3508 -0.0830359 31.0333 0.087636 31.6742C0.258308 32.3152 0.67546 32.8627 1.24814 33.1973L6.02891 35.9606V41.4647C6.02891 42.1286 6.29262 42.7652 6.76202 43.2346C7.23143 43.704 7.86808 43.9677 8.53193 43.9677H14.0386L16.8019 48.7485C17.0235 49.1273 17.3399 49.4419 17.72 49.6613C18.1 49.8808 18.5307 49.9975 18.9695 50C19.405 50 19.8381 49.8849 20.2235 49.6621L24.9993 46.8988L29.7801 49.6621C30.3546 49.9942 31.0376 50.0845 31.6788 49.9132C32.3199 49.7419 32.8668 49.3229 33.1992 48.7485L35.96 43.9677H41.4641C42.128 43.9677 42.7646 43.704 43.2341 43.2346C43.7035 42.7652 43.9672 42.1286 43.9672 41.4647V35.9606L48.7479 33.1973C49.0327 33.0327 49.2822 32.8137 49.4823 32.5526C49.6824 32.2915 49.829 31.9936 49.9139 31.6758C49.9987 31.3581 50.0201 31.0267 49.9768 30.7007C49.9335 30.3746 49.8264 30.0603 49.6615 29.7757L46.9007 25ZM18.7417 12.4599C19.7378 12.4602 20.693 12.8562 21.3971 13.5608C22.1012 14.2654 22.4966 15.2208 22.4963 16.2169C22.4959 17.213 22.0999 18.1682 21.3953 18.8723C20.6908 19.5764 19.7353 19.9718 18.7392 19.9714C17.7431 19.9711 16.788 19.5751 16.0839 18.8705C15.3798 18.1659 14.9844 17.2105 14.9847 16.2144C14.985 15.2183 15.3811 14.2632 16.0856 13.5591C16.7902 12.8549 17.7456 12.4596 18.7417 12.4599ZM19.4926 36.4888L15.4878 33.4877L30.5059 13.4636L34.5108 16.4647L19.4926 36.4888ZM31.2568 37.49C30.7636 37.4898 30.2753 37.3925 29.8197 37.2036C29.364 37.0147 28.9501 36.7379 28.6015 36.389C28.2528 36.0402 27.9763 35.6261 27.7877 35.1703C27.5991 34.7146 27.5021 34.2262 27.5023 33.733C27.5025 33.2397 27.5998 32.7514 27.7887 32.2958C27.9776 31.8402 28.2544 31.4262 28.6032 31.0776C28.9521 30.729 29.3662 30.4524 29.822 30.2639C30.2777 30.0753 30.7661 29.9783 31.2593 29.9784C32.2554 29.9788 33.2106 30.3748 33.9147 31.0794C34.6188 31.7839 35.0142 32.7394 35.0139 33.7355C35.0135 34.7315 34.6175 35.6867 33.9129 36.3908C33.2084 37.0949 32.2529 37.4903 31.2568 37.49Z"
+              fill="#023E8A"
+            />
+          </svg>
+          <p>Offers</p>
+        </button>
+
+        <!-- More Icon -->
+        <button class="icon" data-type="more" onclick="openModal('more')">
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 52 52"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.5 1H3.5C2.83696 1 2.20107 1.26339 1.73223 1.73223C1.26339 2.20107 1 2.83696 1 3.5V18.5C1 19.163 1.26339 19.7989 1.73223 20.2678C2.20107 20.7366 2.83696 21 3.5 21H18.5C19.163 21 19.7989 20.7366 20.2678 20.2678C20.7366 19.7989 21 19.163 21 18.5V3.5C21 2.83696 20.7366 2.20107 20.2678 1.73223C19.7989 1.26339 19.163 1 18.5 1ZM18.5 31H3.5C2.83696 31 2.20107 31.2634 1.73223 31.7322C1.26339 32.2011 1 32.837 1 33.5V48.5C1 49.163 1.26339 49.7989 1.73223 50.2678C2.20107 50.7366 2.83696 51 3.5 51H18.5C19.163 51 19.7989 50.7366 20.2678 50.2678C20.7366 49.7989 21 49.163 21 48.5V33.5C21 32.837 20.7366 32.2011 20.2678 31.7322C19.7989 31.2634 19.163 31 18.5 31ZM48.5 1H33.5C32.837 1 32.2011 1.26339 31.7322 1.73223C31.2634 2.20107 31 2.83696 31 3.5V18.5C31 19.163 31.2634 19.7989 31.7322 20.2678C32.2011 20.7366 32.837 21 33.5 21H48.5C49.163 21 49.7989 20.7366 50.2678 20.2678C50.7366 19.7989 51 19.163 51 18.5V3.5C51 2.83696 50.7366 2.20107 50.2678 1.73223C49.7989 1.26339 49.163 1 48.5 1Z"
+              fill="#023E8A"
+              stroke="#023E8A"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M31 31H51M41 41H51M31 51H51"
+              stroke="#023E8A"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p>More</p>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content Sections -->
+    <section class="my-5">
+      <div class="py-3">
+        <h2 class="text-center">Popular Offers</h2>
+        <p>
+          Tried, tested, and loved by travelers — these tours offer the best of
+          Pokhara in fun, flexible packages. Start from here if you're not sure
+          what to pick!
+        </p>
+      </div>
+      <div class="card-container">
+        <div class="card" style="width: 13rem">
+          <img src="bungee.jpg" class="card-img-top" alt="bungee" />
+          <div class="card-body">
+            <p class="card-text">Bungee Adventure Deal Leap into Adventure</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm('Bungee Adventure Deal', 41.5, 48.9, 'activity')
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="ultra.jpg" class="card-img-top" alt="ultra light" />
+          <div class="card-body">
+            <p class="card-text">Ultra Light Adventure Deal Soar into Sky</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm(
+                  'Ultra Light Adventure Deal',
+                  41.5,
+                  48.9,
+                  'activity',
+                )
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="terk.jpg" class="card-img-top" alt="trekking" />
+          <div class="card-body">
+            <p class="card-text">Trekking Adventure Deal Explore Himalayas</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm(
+                  'Trekking Adventure Deal',
+                  41.5,
+                  48.9,
+                  'activity',
+                )
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="boting.jpg" class="card-img-top" alt="boating" />
+          <div class="card-body">
+            <p class="card-text">Boating Adventure Deal Sail on Phewa Lake</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm(
+                  'Boating Adventure Deal',
+                  41.5,
+                  48.9,
+                  'activity',
+                )
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="para.jpg" class="card-img-top" alt="paragliding" />
+          <div class="card-body">
+            <p class="card-text">Paragliding Adventure Deal Fly with Birds</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm(
+                  'Paragliding Adventure Deal',
+                  41.5,
+                  48.9,
+                  'activity',
+                )
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="nice.jpg" class="card-img-top" alt="mountain view" />
+          <div class="card-body">
+            <p class="card-text">Mountain View Adventure Deal Sunrise Tour</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="
+                openBookingForm(
+                  'Mountain View Adventure Deal',
+                  41.5,
+                  48.9,
+                  'tour',
+                )
+              "
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="temple.jpg" class="card-img-top" alt="temple" />
+          <div class="card-body">
+            <p class="card-text">Temple Tour Deal Peaceful Spiritual Journey</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$11.30 (<del>$18.80</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="openBookingForm('Temple Tour Deal', 11.3, 18.8, 'tour')"
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+        <div class="card" style="width: 13rem">
+          <img src="ghau.jpg" class="card-img-top" alt="ghandruk" />
+          <div class="card-body">
+            <p class="card-text">Ghandruk Village Tour Cultural Experience</p>
+            <p class="discount">-15% OFF!</p>
+            <p class="price">$41.50 (<del>$48.90</del>)</p>
+            <a
+              href="#"
+              class="btn btn-primary"
+              onclick="openBookingForm('Temple Tour Deal', 11.3, 18.8, 'tour')"
+              >BOOK NOW</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Information Modal (for all icons) -->
+    <div
+      class="modal fade"
+      id="infoModal"
+      tabindex="-1"
+      aria-labelledby="infoModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">
+              Loading Information...
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div id="modal-info-content">
+              <div class="loading-spinner">
+                <h4>Loading information...</h4>
+                <div class="spinner-border text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Updated Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Local Tour Guide System</h3>
+            <p>
+              Helping travelers explore Nepal with authentic local experiences,
+              guides, and tours.
+            </p>
+          </div>
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="homee.html">Home</a></li>
+              <li><a href="tour.html">Tours</a></li>
+              <li><a href="guides.html">Guides</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Pokhara, Nepal</p>
+            <p>info@localtoursystem.com</p>
+            <p>+977 9803020600</p>
+          </div>
+        </div>
+        <div class="footer-bottom text-center">
+          <p>© 2025 Local Tour Guide System. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Login check (currently user is NOT logged in)
+      function isUserLoggedIn() {
+        return false; // change to true after login system
+      }
+
+      //  Protect BOOK NOW buttons
+      const originalOpenBookingForm = window.openBookingForm;
+
+      window.openBookingForm = function (
+        title,
+        discountedPrice,
+        originalPrice,
+        type,
+      ) {
+        if (!isUserLoggedIn()) {
+          alert("You have to sign up or login first.");
+          return;
+        }
+
+        // if logged in → continue normal flow
+        if (typeof originalOpenBookingForm === "function") {
+          originalOpenBookingForm(title, discountedPrice, originalPrice, type);
+        }
+      };
+
+      // Current booking item
+      let currentBookingItem = null;
+
+      // Function to open modal with specific content
+      function openModal(type) {
+        const modalTitle = document.getElementById("infoModalLabel");
+        const modalContent = document.getElementById("modal-info-content");
+
+        // Set loading state
+        modalContent.innerHTML = `
+            <div class="loading-spinner">
+                <h4>Loading ${type} information...</h4>
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        `;
+
+        // Show modal
+        const infoModal = new bootstrap.Modal(
+          document.getElementById("infoModal"),
+        );
+        infoModal.show();
+
+        // Load content after a short delay
+        setTimeout(() => {
+          loadContent(type, modalTitle, modalContent);
+        }, 300);
+      }
+
+      // Function to load content based on type
+      function loadContent(type, modalTitle, modalContent) {
+        let title = "";
+        let contentHTML = "";
+
+        switch (type) {
+          case "villa":
+            title = "Luxury Villas in Pokhara";
+            contentHTML = getVillaContent();
+            break;
+          case "hotel":
+            title = "Hotels in Pokhara";
+            contentHTML = getHotelContent();
+            break;
+          case "apartment":
+            title = "Apartments in Pokhara";
+            contentHTML = getApartmentContent();
+            break;
+          case "guide":
+            title = "Local Guides in Pokhara";
+            contentHTML = getGuideContent();
+            break;
+          case "flight":
+            title = "Flights to Pokhara";
+            contentHTML = getFlightContent();
+            break;
+          case "todo":
+            title = "Things to Do in Pokhara";
+            contentHTML = getTodoContent();
+            break;
+          case "offers":
+            title = "Special Offers & Packages";
+            contentHTML = getOffersContent();
+            break;
+          case "more":
+            title = "More Services in Pokhara";
+            contentHTML = getMoreContent();
+            break;
+        }
+
+        modalTitle.textContent = title;
+        modalContent.innerHTML = contentHTML;
+
+        // Initialize tabs for the loaded content
+        initializeTabs(type);
+      }
+
+      // Initialize tabs functionality
+      function initializeTabs(type) {
+        const tabs = document.querySelectorAll(".info-tab");
+        tabs.forEach((tab) => {
+          tab.addEventListener("click", function () {
+            // Remove active class from all tabs
+            tabs.forEach((t) => t.classList.remove("active"));
+            // Add active class to clicked tab
+            this.classList.add("active");
+            // Load content for this tab
+            loadTabContent(type, this.getAttribute("data-type"));
+          });
+        });
+
+        // Load initial tab content
+        const activeTab = document.querySelector(".info-tab.active");
+        if (activeTab) {
+          loadTabContent(type, activeTab.getAttribute("data-type"));
+        }
+      }
+
+      // Function to load tab content
+      function loadTabContent(mainType, tabType) {
+        const contentContainer = document.getElementById(`${mainType}-content`);
+        if (!contentContainer) return;
+
+        let contentHTML = "";
+
+        // Generate content based on main type and tab type
+        switch (mainType) {
+          case "villa":
+            contentHTML = generateVillaContent(tabType);
+            break;
+          case "hotel":
+            contentHTML = generateHotelContent(tabType);
+            break;
+          case "apartment":
+            contentHTML = generateApartmentContent(tabType);
+            break;
+          case "guide":
+            contentHTML = generateGuideContent(tabType);
+            break;
+          case "flight":
+            contentHTML = generateFlightContent(tabType);
+            break;
+          case "todo":
+            contentHTML = generateTodoContent(tabType);
+            break;
+          case "offers":
+            contentHTML = generateOffersContent(tabType);
+            break;
+          case "more":
+            contentHTML = generateMoreContent(tabType);
+            break;
+        }
+
+        contentContainer.innerHTML = contentHTML;
+      }
+
+      // Open booking form
+      function openBookingForm(itemName, currentPrice, originalPrice, type) {
+        currentBookingItem = {
+          name: itemName,
+          price: currentPrice,
+          originalPrice: originalPrice,
+          type: type,
+        };
+
+        const modalTitle = document.getElementById("bookingModalLabel");
+        const modalContent = document.getElementById("booking-form-content");
+
+        modalTitle.textContent = `Book ${itemName}`;
+        modalContent.innerHTML = generateBookingForm(
+          itemName,
+          currentPrice,
+          originalPrice,
+          type,
+        );
+
+        const bookingModal = new bootstrap.Modal(
+          document.getElementById("bookingModal"),
+        );
+        bookingModal.show();
+
+        // Initialize datepickers
+        initializeDatePickers();
+
+        // Initialize form validation
+        initializeFormValidation();
+      }
+
+      // Generate booking form based on type
+      function generateBookingForm(
+        itemName,
+        currentPrice,
+        originalPrice,
+        type,
+      ) {
+        let formSpecificFields = "";
+
+        switch (type) {
+          case "villa":
+          case "hotel":
+          case "apartment":
+            formSpecificFields = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Check-in Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="checkin-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Check-out Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="checkout-date" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of Rooms <span class="required">*</span></label>
+                                <select class="form-select" id="rooms" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Room</option>
+                                    <option value="2">2 Rooms</option>
+                                    <option value="3">3 Rooms</option>
+                                    <option value="4">4 Rooms</option>
+                                    <option value="5">5+ Rooms</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of Guests <span class="required">*</span></label>
+                                <select class="form-select" id="guests" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Guest</option>
+                                    <option value="2">2 Guests</option>
+                                    <option value="3">3 Guests</option>
+                                    <option value="4">4 Guests</option>
+                                    <option value="5">5+ Guests</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>`;
+            break;
+
+          case "guide":
+            formSpecificFields = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tour Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="tour-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Tour Duration <span class="required">*</span></label>
+                                <select class="form-select" id="duration" required>
+                                    <option value="">Select</option>
+                                    <option value="half-day">Half Day (4 hours)</option>
+                                    <option value="full-day">Full Day (8 hours)</option>
+                                    <option value="2-days">2 Days</option>
+                                    <option value="3-days">3 Days</option>
+                                    <option value="custom">Custom</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of People <span class="required">*</span></label>
+                                <select class="form-select" id="people" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Language Preference</label>
+                                <select class="form-select" id="language">
+                                    <option value="english">English</option>
+                                    <option value="nepali">Nepali</option>
+                                    <option value="hindi">Hindi</option>
+                                    <option value="other">Other (specify in notes)</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>`;
+            break;
+
+          case "flight":
+            formSpecificFields = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Departure Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="departure-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Return Date</label>
+                                <input type="date" class="form-control" id="return-date">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>From <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="from-city" placeholder="Departure city" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>To <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="to-city" placeholder="Destination city" value="Pokhara" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of Passengers <span class="required">*</span></label>
+                                <select class="form-select" id="passengers" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Passenger</option>
+                                    <option value="2">2 Passengers</option>
+                                    <option value="3">3 Passengers</option>
+                                    <option value="4">4 Passengers</option>
+                                    <option value="5">5+ Passengers</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Class</label>
+                                <select class="form-select" id="flight-class">
+                                    <option value="economy">Economy</option>
+                                    <option value="premium-economy">Premium Economy</option>
+                                    <option value="business">Business</option>
+                                    <option value="first">First Class</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>`;
+            break;
+
+          case "activity":
+          case "tour":
+            formSpecificFields = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Activity Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="activity-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Time Slot <span class="required">*</span></label>
+                                <select class="form-select" id="time-slot" required>
+                                    <option value="">Select time</option>
+                                    <option value="morning">Morning (6 AM - 12 PM)</option>
+                                    <option value="afternoon">Afternoon (12 PM - 4 PM)</option>
+                                    <option value="evening">Evening (4 PM - 8 PM)</option>
+                                    <option value="full-day">Full Day</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of Participants <span class="required">*</span></label>
+                                <select class="form-select" id="participants" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Pickup Location</label>
+                                <input type="text" class="form-control" id="pickup-location" placeholder="Your hotel or location">
+                            </div>
+                        </div>
+                    </div>`;
+            break;
+
+          default:
+            formSpecificFields = `
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Service Date <span class="required">*</span></label>
+                                <input type="date" class="form-control" id="service-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Number of People <span class="required">*</span></label>
+                                <select class="form-select" id="people-count" required>
+                                    <option value="">Select</option>
+                                    <option value="1">1 Person</option>
+                                    <option value="2">2 People</option>
+                                    <option value="3">3 People</option>
+                                    <option value="4">4 People</option>
+                                    <option value="5">5+ People</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>`;
+        }
+
+        return `
+        <div class="booking-form-container">
+            <div class="booking-form">
+                <h4>Booking Details</h4>
+                <form id="bookingForm">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Full Name <span class="required">*</span></label>
+                                <input type="text" class="form-control" id="full-name" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Email Address <span class="required">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Phone Number <span class="required">*</span></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Country <span class="required">*</span></label>
+                                <select class="form-select" id="country" required>
+                                    <option value="">Select your country</option>
+                                    <option value="nepal">Nepal</option>
+                                    <option value="india">India</option>
+                                    <option value="usa">United States</option>
+                                    <option value="uk">United Kingdom</option>
+                                    <option value="australia">Australia</option>
+                                    <option value="germany">Germany</option>
+                                    <option value="france">France</option>
+                                    <option value="japan">Japan</option>
+                                    <option value="china">China</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    ${formSpecificFields}
+                    
+                    <div class="form-group">
+                        <label>Special Requests or Notes</label>
+                        <textarea class="form-control" id="notes" rows="3" placeholder="Any special requests or additional information"></textarea>
+                    </div>
+                    
+                    <div class="booking-summary">
+                        <h5>Booking Summary</h5>
+                        <div class="summary-item">
+                            <span>Service:</span>
+                            <span>${itemName}</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Original Price:</span>
+                            <span><del>$${originalPrice.toFixed(2)}</del></span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Discounted Price:</span>
+                            <span>$${currentPrice.toFixed(2)}</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>You Save:</span>
+                            <span style="color: #e74c3c;">$${(originalPrice - currentPrice).toFixed(2)}</span>
+                        </div>
+                        <div class="summary-item summary-total">
+                            <span>Total Amount:</span>
+                            <span>$${currentPrice.toFixed(2)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group mt-4">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">
+                            <i class="fas fa-paper-plane"></i> Confirm Booking
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>`;
+      }
+
+      // Initialize datepickers
+      function initializeDatePickers() {
+        const today = new Date();
+        const tomorrow = new Date(today);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+
+        // Format date as YYYY-MM-DD
+        const formatDate = (date) => {
+          return date.toISOString().split("T")[0];
+        };
+
+        // Set min date to today for all date inputs
+        document.querySelectorAll('input[type="date"]').forEach((input) => {
+          input.min = formatDate(today);
+          if (
+            input.id === "checkin-date" ||
+            input.id === "tour-date" ||
+            input.id === "departure-date" ||
+            input.id === "activity-date" ||
+            input.id === "service-date"
+          ) {
+            input.value = formatDate(today);
+          }
+          if (input.id === "checkout-date") {
+            input.value = formatDate(tomorrow);
+            input.min = formatDate(tomorrow);
+          }
+          if (input.id === "return-date") {
+            const departureInput = document.getElementById("departure-date");
+            if (departureInput) {
+              const departureDate = new Date(departureInput.value);
+              const returnDate = new Date(departureDate);
+              returnDate.setDate(returnDate.getDate() + 3);
+              input.value = formatDate(returnDate);
+              input.min = formatDate(departureDate);
+            }
+          }
+        });
+      }
+
+      // Initialize form validation
+      function initializeFormValidation() {
+        const form = document.getElementById("bookingForm");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (validateForm()) {
+              submitBooking();
+            }
+          });
+        }
+
+        // Add real-time validation
+        document
+          .querySelectorAll("#bookingForm input, #bookingForm select")
+          .forEach((element) => {
+            element.addEventListener("change", function () {
+              validateField(this);
+            });
+          });
+      }
+
+      // Validate individual field
+      function validateField(field) {
+        if (field.required && !field.value.trim()) {
+          field.classList.add("is-invalid");
+          return false;
+        }
+
+        // Email validation
+        if (field.type === "email" && field.value.trim()) {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(field.value)) {
+            field.classList.add("is-invalid");
+            return false;
+          }
+        }
+
+        // Phone validation
+        if (field.type === "tel" && field.value.trim()) {
+          const phoneRegex = /^[+]?[\d\s\-()]{10,}$/;
+          if (!phoneRegex.test(field.value)) {
+            field.classList.add("is-invalid");
+            return false;
+          }
+        }
+
+        field.classList.remove("is-invalid");
+        field.classList.add("is-valid");
+        return true;
+      }
+
+      // Validate entire form
+      function validateForm() {
+        let isValid = true;
+        const form = document.getElementById("bookingForm");
+
+        form.querySelectorAll("input, select, textarea").forEach((field) => {
+          if (field.required && !validateField(field)) {
+            isValid = false;
+          }
+        });
+
+        return isValid;
+      }
+
+      // Submit booking
+      function submitBooking() {
+        const form = document.getElementById("bookingForm");
+        const formData = new FormData(form);
+        const bookingData = {
+          service: currentBookingItem.name,
+          price: currentBookingItem.price,
+          type: currentBookingItem.type,
+          customerInfo: {},
+          bookingDetails: {},
+        };
+
+        // Collect form data
+        formData.forEach((value, key) => {
+          if (key.startsWith("customer-")) {
+            bookingData.customerInfo[key.replace("customer-", "")] = value;
+          } else {
+            bookingData.bookingDetails[key] = value;
+          }
+        });
+
+        // Add all form fields to customerInfo
+        form.querySelectorAll("input, select, textarea").forEach((field) => {
+          bookingData.customerInfo[field.id] = field.value;
+        });
+
+        // Show success message
+        const modalContent = document.getElementById("booking-form-content");
+        modalContent.innerHTML = `
+            <div class="booking-success">
+                <i class="fas fa-check-circle"></i>
+                <h4>Booking Confirmed!</h4>
+                <p>Thank you for booking ${currentBookingItem.name}.</p>
+                <p>Your booking reference: <strong>PKR-${Date.now().toString().slice(-8)}</strong></p>
+                <p>We have sent a confirmation email to ${bookingData.customerInfo.email}</p>
+                <p>Our team will contact you shortly to finalize the details.</p>
+                <button class="btn btn-primary mt-3" onclick="closeBookingModal()">
+                    <i class="fas fa-home"></i> Back to Home
+                </button>
+            </div>
+        `;
+
+        // Here you would typically send the data to your server
+        console.log("Booking submitted:", bookingData);
+
+        // Simulate API call
+        setTimeout(() => {
+          // In a real application, you would make an API call here
+          // fetch('/api/bookings', { method: 'POST', body: JSON.stringify(bookingData) })
+        }, 1000);
+      }
+
+      // Close booking modal
+      function closeBookingModal() {
+        const bookingModal = bootstrap.Modal.getInstance(
+          document.getElementById("bookingModal"),
+        );
+        bookingModal.hide();
+      }
+
+      // Book item from info modal
+      window.bookItem = function (itemName, itemPrice, itemType) {
+        const originalPrice = itemPrice * 1.2; // Add 20% to show discount
+        openBookingForm(
+          itemName,
+          itemPrice,
+          originalPrice,
+          itemType || "service",
+        );
+
+        // Close the info modal
+        const infoModal = bootstrap.Modal.getInstance(
+          document.getElementById("infoModal"),
+        );
+        infoModal.hide();
+      };
+
+      // Content templates for each icon
+      function getVillaContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Luxury Villas in Pokhara</h2>
+                <p>Experience ultimate privacy and luxury in our premium villas with stunning mountain and lake views</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="all">All Villas</div>
+                <div class="info-tab" data-type="mountain">Mountain View</div>
+                <div class="info-tab" data-type="lake">Lake View</div>
+                <div class="info-tab" data-type="luxury">Luxury</div>
+                <div class="info-tab" data-type="family">Family Villas</div>
+            </div>
+            
+            <div class="row" id="villa-content">
+                ${generateVillaContent("all")}
+            </div>
+        </div>`;
+      }
+
+      function getHotelContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Hotels in Pokhara</h2>
+                <p>Find the perfect accommodation for your stay in Pokhara, from budget to luxury options</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="all">All Hotels</div>
+                <div class="info-tab" data-type="budget">Budget</div>
+                <div class="info-tab" data-type="midrange">Mid-Range</div>
+                <div class="info-tab" data-type="luxury">Luxury</div>
+                <div class="info-tab" data-type="boutique">Boutique</div>
+            </div>
+            
+            <div class="row" id="hotel-content">
+                ${generateHotelContent("all")}
+            </div>
+        </div>`;
+      }
+
+      function getApartmentContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Apartments in Pokhara</h2>
+                <p>Rent comfortable apartments for short or long stays in Pokhara's prime locations</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="all">All Apartments</div>
+                <div class="info-tab" data-type="studio">Studio</div>
+                <div class="info-tab" data-type="1bed">1 Bedroom</div>
+                <div class="info-tab" data-type="2bed">2 Bedroom</div>
+                <div class="info-tab" data-type="penthouse">Penthouse</div>
+            </div>
+            
+            <div class="row" id="apartment-content">
+                ${generateApartmentContent("all")}
+            </div>
+        </div>`;
+      }
+
+      function getGuideContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Local Guides in Pokhara</h2>
+                <p>Explore Pokhara with experienced local guides who know all the hidden gems</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="all">All Guides</div>
+                <div class="info-tab" data-type="trekking">Trekking</div>
+                <div class="info-tab" data-type="culture">Cultural</div>
+                <div class="info-tab" data-type="adventure">Adventure</div>
+                <div class="info-tab" data-type="photography">Photography</div>
+            </div>
+            
+            <div class="row" id="guide-content">
+                ${generateGuideContent("all")}
+            </div>
+        </div>`;
+      }
+
+      function getFlightContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Flights to Pokhara</h2>
+                <p>Book your flights to Pokhara with the best deals and convenient schedules</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="domestic">Domestic</div>
+                <div class="info-tab" data-type="international">International</div>
+                <div class="info-tab" data-type="deals">Best Deals</div>
+                <div class="info-tab" data-type="airlines">Airlines</div>
+            </div>
+            
+            <div class="row" id="flight-content">
+                ${generateFlightContent("domestic")}
+            </div>
+        </div>`;
+      }
+
+      function getTodoContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Things to Do in Pokhara</h2>
+                <p>Discover exciting activities and attractions in Pokhara</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="adventure">Adventure</div>
+                <div class="info-tab" data-type="culture">Culture</div>
+                <div class="info-tab" data-type="nature">Nature</div>
+                <div class="info-tab" data-type="relaxation">Relaxation</div>
+            </div>
+            
+            <div class="row" id="todo-content">
+                ${generateTodoContent("adventure")}
+            </div>
+        </div>`;
+      }
+
+      function getOffersContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>Special Offers & Packages</h2>
+                <p>Exclusive deals and packages for your Pokhara adventure</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="tours">Tour Packages</div>
+                <div class="info-tab" data-type="hotels">Hotel Deals</div>
+                <div class="info-tab" data-type="activities">Activities</div>
+                <div class="info-tab" data-type="seasonal">Seasonal</div>
+            </div>
+            
+            <div class="row" id="offers-content">
+                ${generateOffersContent("tours")}
+            </div>
+        </div>`;
+      }
+
+      function getMoreContent() {
+        return `
+        <div class="info-container">
+            <div class="info-header">
+                <h2>More Services in Pokhara</h2>
+                <p>Additional services and information for your Pokhara trip</p>
+            </div>
+            
+            <div class="info-tabs">
+                <div class="info-tab active" data-type="transport">Transport</div>
+                <div class="info-tab" data-type="dining">Dining</div>
+                <div class="info-tab" data-type="shopping">Shopping</div>
+                <div class="info-tab" data-type="events">Events</div>
+            </div>
+            
+            <div class="row" id="more-content">
+                ${generateMoreContent("transport")}
+            </div>
+        </div>`;
+      }
+
+      // Content generators for each type
+      function generateVillaContent(tabType) {
+        const villas = [
+          {
+            id: 1,
+            name: "Mountain View Luxury Villa",
+            price: 188.5, // Approximately 25,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "4 Bedrooms",
+              "Private Pool",
+              "Mountain View",
+              "5,000 sq ft",
+            ],
+            description:
+              "Luxury villa with panoramic mountain views and private pool",
+            type: "villa",
+          },
+          {
+            id: 2,
+            name: "Lakefront Villa Retreat",
+            price: 226.2, // Approximately 30,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "3 Bedrooms",
+              "Lake Access",
+              "Private Dock",
+              "4,500 sq ft",
+            ],
+            description: "Beautiful villa with direct access to Phewa Lake",
+            type: "villa",
+          },
+        ];
+
+        return generateCardContent(villas);
+      }
+
+      function generateHotelContent(tabType) {
+        const hotels = [
+          {
+            id: 1,
+            name: "Grand Mountain Hotel",
+            price: 64.1, // Approximately 8,500 NPR
+            image:
+              "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: ["5 Star", "Lake View", "Spa", "Pool", "Restaurant"],
+            description: "Luxury hotel with stunning views of Phewa Lake",
+            type: "hotel",
+          },
+          {
+            id: 2,
+            name: "Pokhara Valley Resort",
+            price: 33.9, // Approximately 4,500 NPR
+            image:
+              "https://images.unsplash.com/photo-1611892440504-42a792e24d32?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "4 Star",
+              "Garden View",
+              "Free WiFi",
+              "Breakfast",
+              "Bar",
+            ],
+            description: "Comfortable resort in peaceful surroundings",
+            type: "hotel",
+          },
+        ];
+
+        return generateCardContent(hotels);
+      }
+
+      function generateApartmentContent(tabType) {
+        const apartments = [
+          {
+            id: 1,
+            name: "Studio Apartment with Mountain View",
+            price: 188.5, // Approximately 25,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: ["450 sq ft", "Mountain View", "1 Bath", "Kitchenette"],
+            description:
+              "Perfect for individuals or couples with stunning mountain views",
+            type: "apartment",
+          },
+          {
+            id: 2,
+            name: "1 Bedroom Lake View Apartment",
+            price: 263.9, // Approximately 35,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "750 sq ft",
+              "Lake View",
+              "1 Bed",
+              "1 Bath",
+              "Full Kitchen",
+            ],
+            description:
+              "Spacious apartment with panoramic views of Phewa Lake",
+            type: "apartment",
+          },
+        ];
+
+        return generateCardContent(apartments);
+      }
+
+      function generateGuideContent(tabType) {
+        const guides = [
+          {
+            id: 1,
+            name: "Raj Thapa - Trekking Guide",
+            price: 26.4, // Approximately 3,500 NPR
+            image:
+              "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "10+ Years Experience",
+              "English Speaking",
+              "First Aid Certified",
+              "Local Knowledge",
+            ],
+            description: "Experienced trekking guide for Annapurna region",
+            type: "guide",
+          },
+          {
+            id: 2,
+            name: "Sita Gurung - Cultural Guide",
+            price: 18.8, // Approximately 2,500 NPR
+            image:
+              "https://i.pinimg.com/1200x/aa/78/ce/aa78ce7c538a903b98a0c4a39b89636f.jpg",
+            features: [
+              "Cultural Expert",
+              "Multilingual",
+              "Historical Knowledge",
+              "Photography Help",
+            ],
+            description:
+              "Knowledgeable guide for cultural and historical tours",
+            type: "guide",
+          },
+        ];
+
+        return generateCardContent(guides);
+      }
+
+      function generateFlightContent(tabType) {
+        const flights = [
+          {
+            id: 1,
+            name: "Kathmandu to Pokhara Flight",
+            price: 60.3, // Approximately 8,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "25min Duration",
+              "Daily Flights",
+              "Multiple Airlines",
+              "Scenic Views",
+            ],
+            description: "Quick and scenic flight from Kathmandu to Pokhara",
+            type: "flight",
+          },
+          {
+            id: 2,
+            name: "International Connections",
+            price: 188.5, // Approximately 25,000 NPR
+            image:
+              "https://i.pinimg.com/736x/22/95/e4/2295e42a259c2a69564f9c58cf9c60d2.jpg",
+            features: [
+              "Via Kathmandu",
+              "Major Airlines",
+              "Booking Assistance",
+              "Best Deals",
+            ],
+            description: "International flight connections to Pokhara",
+            type: "flight",
+          },
+        ];
+
+        return generateCardContent(flights);
+      }
+
+      function generateTodoContent(tabType) {
+        const activities = [
+          {
+            id: 1,
+            name: "Paragliding in Pokhara",
+            price: 64.1, // Approximately 8,500 NPR
+            image:
+              "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "30min Flight",
+              "Instructor Guided",
+              "Photos Included",
+              "Safety Gear",
+            ],
+            description: "Experience the thrill of flying over Pokhara valley",
+            type: "activity",
+          },
+          {
+            id: 2,
+            name: "Boating on Phewa Lake",
+            price: 11.3, // Approximately 1,500 NPR
+            image:
+              "https://images.unsplash.com/photo-1506929562872-bb421503ef21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "Row Boat",
+              "Paddle Boat",
+              "Guide Available",
+              "Life Jackets",
+            ],
+            description: "Peaceful boating experience on beautiful Phewa Lake",
+            type: "activity",
+          },
+        ];
+
+        return generateCardContent(activities);
+      }
+
+      function generateOffersContent(tabType) {
+        const offers = [
+          {
+            id: 1,
+            name: "Adventure Package Deal",
+            price: 113.1, // Approximately 15,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "Paragliding",
+              "Bungee Jumping",
+              "Zip Line",
+              "3 Days Hotel",
+            ],
+            description: "Complete adventure package for thrill seekers",
+            type: "package",
+          },
+          {
+            id: 2,
+            name: "Family Vacation Package",
+            price: 339.4, // Approximately 45,000 NPR
+            image:
+              "https://i.pinimg.com/736x/d2/2d/30/d22d30c6c84925bd8f0c5db03f86c908.jpg",
+            features: [
+              "4 Days Hotel",
+              "Guided Tours",
+              "All Meals",
+              "Transport",
+            ],
+            description: "Perfect family vacation package in Pokhara",
+            type: "package",
+          },
+        ];
+
+        return generateCardContent(offers);
+      }
+
+      function generateMoreContent(tabType) {
+        const services = [
+          {
+            id: 1,
+            name: "Local Transportation Services",
+            price: 15.1, // Approximately 2,000 NPR
+            image:
+              "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "Car Rental",
+              "Taxi Service",
+              "Scooter Rental",
+              "Airport Transfer",
+            ],
+            description: "Reliable transportation services in Pokhara",
+            type: "transport",
+          },
+          {
+            id: 2,
+            name: "Local Dining Guide",
+            price: 0,
+            image:
+              "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            features: [
+              "Local Cuisine",
+              "Best Restaurants",
+              "Budget Options",
+              "Luxury Dining",
+            ],
+            description: "Guide to the best dining experiences in Pokhara",
+            type: "dining",
+          },
+        ];
+
+        return generateCardContent(services);
+      }
+
+      // Helper function to generate card content
+      function generateCardContent(items) {
+        let html = "";
+        items.forEach((item) => {
+          const originalPrice = item.price > 0 ? item.price * 1.2 : 0;
+          html += `
+            <div class="col-md-6 mb-4">
+                <div class="info-card">
+                    <img src="${item.image}" alt="${item.name}" class="info-img">
+                    <div class="info-details">
+                        <h5>${item.name}</h5>
+                        <p class="mb-3">${item.description}</p>
+                        ${
+                          item.price > 0
+                            ? `
+                        <div class="info-price mb-3">
+                            $${item.price.toFixed(2)}
+                            ${originalPrice > 0 ? `<del class="text-muted" style="font-size: 0.9rem;">$${originalPrice.toFixed(2)}</del>` : ""}
+                        </div>
+                        `
+                            : '<div class="info-price mb-3">Free Guide</div>'
+                        }
+                        <div class="info-features mb-3">
+                            ${item.features
+                              .map(
+                                (feature) =>
+                                  `<div class="feature">
+                                    <i class="fas fa-check"></i>
+                                    <span>${feature}</span>
+                                </div>`,
+                              )
+                              .join("")}
+                        </div>
+                        <button class="btn-action" onclick="bookItem('${item.name}', ${item.price}, '${item.type}')">
+                            <i class="fas fa-calendar-alt"></i> Book Now
+                        </button>
+                    </div>
+                </div>
+            </div>`;
+        });
+        return html;
+      }
+
+      // Initialize with apartment content when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        // Set minimum dates for any date inputs that might be on page
+        initializeDatePickers();
+      });
+    </script>
+  </body>
+</html>

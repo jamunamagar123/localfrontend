@@ -1,0 +1,162 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: 80px; /* Added padding for fixed navbar */
+}
+:root {
+  --brand: #023e8a;
+  --brand-light: #0077b6;
+  --muted: #f8f9fa;
+  --accent: #007bff;
+  --text: #120f0f;
+  --light-text: #666;
+  --border: #e9ecef;
+  --bg: #fbfdff;
+  --card: #fff;
+  --accent2: #ff6b4a;
+  --footer-bg: #023e8a;
+  --footer-text: #ffffff;
+}
+/* Updated Navigation Styles */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--muted);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 50px;
+  background-color: #e9ecef;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--brand);
+  font-size: 16px;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #90e0ef;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #90e0ef;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signup {
+  background: white;
+  color: var(--brand);
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 2px solid white;
+}
+
+.signup:hover {
+  background: transparent;
+  color: rgb(128, 4, 237);
+}
+
+#searchBox {
+  width: 80%;
+  max-width: 600px;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-bottom: 3px solid white;
+  background: transparent;
+  color: white;
+  outline: none;
+}
+
+#closeBtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .signup {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 15px;
+  }
+
+  .nav-actions {
+    margin-top: 10px;
+  }
+  
+}
